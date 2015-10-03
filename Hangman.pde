@@ -6,6 +6,7 @@ void setup() {
   word.makeCharArray();
   word.createLineObjects();
   textAlign(CENTER, CENTER);
+  strokeCap(PROJECT);
 }
 
 void draw() {

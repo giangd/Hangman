@@ -22,6 +22,7 @@ public void setup() {
   word.makeCharArray();
   word.createLineObjects();
   textAlign(CENTER, CENTER);
+  strokeCap(PROJECT);
 }
 
 public void draw() {
