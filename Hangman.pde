@@ -203,18 +203,30 @@ class Word {
         fill(200, 0, 0);
         text("YOU LOSE!!!", x, y-20);
         textSize(30);
-        text("Refresh Page to Play Again", x, y+40);
+        text("Press R to Play Again", x, y+40);
         for (int i = 0; i < lines.length; i ++) {
           if (lines[i].showBlank) {
             lines[i].displayCharacter();
           }
+        }
+        if (key == 'r') {
+          word = new Word();
+          word.selectRandomWord();
+          word.makeCharArray();
+          word.createLineObjects();
         }
       } else {
         textSize(75);
         fill(0, 200, 0);
         text("YOU WIN!!!", x, y-20);
         textSize(30);
-        text("Refresh Page to Play Again", x, y+40);
+        text("Press R to Play Again", x, y+40);
+        if (key == 'r') {
+          word = new Word();
+          word.selectRandomWord();
+          word.makeCharArray();
+          word.createLineObjects();
+        }      
       }
     }
   }
